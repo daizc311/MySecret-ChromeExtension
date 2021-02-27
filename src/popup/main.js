@@ -9,7 +9,7 @@ import store from '../store'
 Vue.use(ElementUI)
 
 /* eslint-disable no-new */
-new Vue({
+var vueTemp = new Vue({
     // router,
     el: '#app',
     router,

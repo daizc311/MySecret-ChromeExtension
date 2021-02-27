@@ -3,7 +3,7 @@
     <el-container>
       <el-header style="height: 40px">
         <!-- 菜单 -->
-        <el-menu :default-active="'/PwdItems'"
+        <el-menu :default-active="$route.path"
                  class="el-menu-demo"
                  mode="horizontal"
                  :background-color="backgroundColor"
@@ -11,9 +11,9 @@
                  active-text-color="#ffd04b"
                  router="true"
                  @select="handleSelect">
-          <el-menu-item index="/A1">处理中心</el-menu-item>
-          <el-menu-item index="/PwdItems">密码管理</el-menu-item>
-          <el-menu-item index="/about">记事管理</el-menu-item>
+          <el-menu-item  index="/Notebook">记事本</el-menu-item>
+          <el-menu-item  index="/PwdItems">密码管理</el-menu-item>
+          <el-menu-item  index="/A1">处理中心</el-menu-item>
         </el-menu>
         <!-- 头像 -->
         <div class="avatar">
@@ -34,16 +34,20 @@
 
 export default {
   name: 'AppPopup',
+  created() {
+    this.$router.push(this.defaultActive)
+  },
   data: function () {
     return {
       avatarImgSrc:"https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png",
       backgroundColor:"#545c64",
+      defaultActive:"/Notebook",
       test: true
     }
   },
   methods: {
     handleSelect(key, keyPath) {
-      console.log(key, keyPath);
+      // console.log(key, keyPath);
     }
   }
 }

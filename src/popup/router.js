@@ -1,14 +1,15 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Notebook from '@/popup/components/Notebook.vue'
+import Page404 from '@/views/404.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/A1',
-    name: 'A1',
-    component: () => import(/* webpackChunkName: "about" */ '@/popup/components/A1.vue')
+    path: '/Notebook',
+    name: 'Notebook',
+    component: Notebook
   },
   {
     path: '/PwdItems',
@@ -22,6 +23,12 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+  },
+  {
+    // 会匹配所有路径
+    path: '*',
+    name: '404',
+    component: Page404,
   }
 ]
 
