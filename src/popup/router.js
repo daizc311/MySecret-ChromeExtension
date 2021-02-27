@@ -14,7 +14,12 @@ const routes = [
   {
     path: '/PwdItems',
     name: 'PwdItems',
-    component: () => import(/* webpackChunkName: "about" */ '@/popup/components/PwdItems.vue')
+    component: () => import('@/popup/components/PwdItems.vue')
+  },
+  {
+    path: '/Setting',
+    name: 'Setting',
+    component: () => import('@/popup/components/Setting.vue')
   },
   {
     path: '/about',

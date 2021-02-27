@@ -13,7 +13,7 @@
                  @select="handleSelect">
           <el-menu-item  index="/Notebook">记事本</el-menu-item>
           <el-menu-item  index="/PwdItems">密码管理</el-menu-item>
-          <el-menu-item  index="/A1">处理中心</el-menu-item>
+          <el-menu-item  index="/Setting">设置</el-menu-item>
         </el-menu>
         <!-- 头像 -->
         <div class="avatar">
